@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    background: linear-gradient(90deg, rgb(67, 62, 62), rgb(87, 87, 87));
+}
+
+li{
+    list-style-type: none;
+}
+
+p{
+    line-height: 1.5;
+    font-size: 20px;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: aqua;
+}
+
+.link__hover-effect{
+    position: relative;
+}
+
+.link__hover-effect--white::after{
+    background-color: #fff;
+}
+
+.link__hover-effect:after{
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    width: 0;
+    height: 3px;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect:hover:after{
+    left:0;
+    width: 100%;
+}
+
+.line__top{
+    width: 50%;
+    /* margin-right: 24px; */
+    position: relative;
+}
+
+hr{
+    background-color: white;
+    height: 4px;
+    border: none;
+    width: 80%;
+}
+
+nav, .scroll, .header, .bottom{
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms 800ms;
+}
+
+#landing__page{
+    min-height: 100vh;
+}
+
+.blue{
+    color:rgb(10, 50, 240)
+}
+
+.header{
+    font-size: 44px;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 100px;
+    padding: 0 20px 0 0;
+}
+
+.nav__link--list{
+    display: flex;
+    width: 50%;
+}
+
+.nav__link{
+    margin: 0 12px;
+}
+
+.about, .me{
+    width: 50%;
+    max-height: 600px;
+    /* margin-top: 100px; */
+}
+
+.me{
+    margin-right: 32px;
+}
+
+.about{
+    margin-left: 32px;
+}
+
+.me__img{
+    height: 85%;
+    width: 85%;
+    border-radius: 50%;
+}
+
+.nav__link--anchor{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateY(3px);
+    }
+
+    100%{
+        transform: translateY(-3px);
+    }
+}
+
+.scroll{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 5;
+}
+
+.bottom{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    bottom: 28px;
+}
+
+.scroll__icon{
+    width: 20px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 24px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll__icon:after{
+    background-color: #242424;
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    animation: scroll 1000ms infinite alternate-reverse;
+}
+
+.container{
+    padding: 50px 0 0 0;
+    width: 100%;
+}
+
+.row{
+    width: 100%;
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 12px;
+}
+
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.circle{
+    height: 32px;
+    width: 32px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.circles{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fixed-b{
+    position: fixed;
+    bottom: 16px;
+    padding: 0 0 0 40px;
+}
+
+.line-b{
+    position: absolute;
+    right: 0;
+}
+
+.top{
+    position: fixed;
+    top: 0;
+}
+
+.skill__img, .exp__img{
+    width: 50%;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.img__skill, .exp__skill, .work__img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.skill__info{
+    width: 50%;
+    margin-left: 20px;
+}
+
+.exp__info{
+    margin-left: 32px;
+}
+
+.work__info{
+    margin-bottom: 32px;
+}
+
+section{
+    min-height: 100vh;
+    margin-bottom: 24px;
+}
+
+.special{
+    padding: 165px 0 0 0;
+}
+
+.work__contents{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work__content{
+    width: calc(100% / 3.5);
+    margin: 0 8px;
+    text-align: center;
+}
+
+.work__content > a{
+    text-decoration: underline;
+    margin-bottom: 16px;
+    color: gray;
+}
+
+.subtitle{
+    font-size: 24px;
+    color: #fff;
+}
+
+.ed__text{
+    width: 50%;
+    margin-right: 24px;
+}
+
+.ed__img{
+    width: 50%;
+    margin-left: 24px;
+}
+
+.img__ed{
+    width: 100%;
+    height: 50vh;
+    object-fit: contain;
+}
+
+.ed__text > .header{
+    margin-bottom: 24px;
+}
+
+.ed__text > p{
+    opacity: 0.7;
+    margin-bottom: 32px;
+}
+
+.ed__text > .subtitle{
+    margin-bottom: 16px;
+}
+
+@media (max-width: 480px){
+
+}
+
+@media (max-width: 768px){
+
+}
